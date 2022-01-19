@@ -203,7 +203,7 @@ function eventHandler(){
   // console.log(date)
   // console.log(checkPalindromeForAll(date));
   if(checkPalindromeForAll(date)){
-    output.innerText = "Yayy!... it's a palindrome"
+    output.innerText = "Yayy!... it's a palindrome🥳🥳"
   }else{
     var nextPal = getNextPalindromeDate(date);
     var prevPal = getPreviousPalindromeDate(date);
@@ -226,7 +226,7 @@ function eventHandler(){
   }
   }else{
     // console.log("no input")
-    output.innerText ="Please enter your birth date"
+    output.innerText ="Please enter your birth date😐"
   }
 }
 
@@ -237,5 +237,5 @@ function outputPalindromeDate(date){
   var year = date[1].year;
   var counter = date[0];
   // console.log(day, month, year , counter)
-  output.innerText = `The next nearest palindrome to your birth date is ${day}-${month}-${year}. You missed it by ${counter} days.....`;
+  output.innerText = `The nearest palindrome to your DOB is ${day}-${month}-${year}. You missed it by ${counter} days.....🙂`;
 }

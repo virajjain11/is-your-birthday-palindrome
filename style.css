@@ -9,16 +9,52 @@ body{
     margin: auto;
     text-align: center;
     font-family: 'Be Vietnam Pro', sans-serif;
-    
+    font-size: 1.4rem;
 }
 #heading{
     font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+    /* margin-top: 0; */
+    max-width: 66%;
+    margin: auto;
+    font-size: 2rem;
+    background-color: aqua;
+    border-radius: 2rem;
+    /* box-sizing: border-box; */
 }
-.text{
-    font-size: 1.4rem;
+#inputDate{
+    font-size: 1rem;
+    border: none;
+    border-bottom: 3px solid slateblue;
+   
+    height: 28px;
+    padding: .5rem 1.5rem;
+    font-weight: bold;
+    outline: none;
+    margin: 0 auto;
+    background-color: #ecf0f1;
 }
+
+/* .text{
+    
+} */
 #btn{
-    padding: .4rem;
+    /* height: ;  */
+     padding: .5rem 2rem;
     font-size: 1rem;
     margin: 1rem;
+    border: none;
+    font-weight:600;
+    font-size: 1.2rem;
+    background-color: #ecf0f1;
+    border-radius: .4rem;
+    transition-duration: .5s;
+
+
+    
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    
 }
