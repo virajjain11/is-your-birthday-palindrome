@@ -182,3 +182,60 @@ function getPreviousPalindromeDate(date) {
     }
     return [counter, newDate];
 }
+
+
+var inputValue = document.querySelector("#inputDate");
+var btn =document.querySelector("#btn");  
+var output =document.querySelector("#output");
+
+btn.addEventListener("click", eventHandler);
+
+function eventHandler(){
+  // console.log("clicked")
+  var inputDateStr = inputValue.value;
+  if(inputDateStr!==''){
+  var listStr = inputDateStr.split('-');
+  var date = {
+    day: Number(listStr[2]),
+    month:Number(listStr[1]),
+    year: Number(listStr[0])
+  }
+  // console.log(date)
+  // console.log(checkPalindromeForAll(date));
+  if(checkPalindromeForAll(date)){
+    output.innerText = "Yayy!... it's a palindrome"
+  }else{
+    var nextPal = getNextPalindromeDate(date);
+    var prevPal = getPreviousPalindromeDate(date);
+
+    // console.log(getNextPalindromeDate(date))
+    //  console.log(getPreviousPalindromeDate(date))
+    // console.log(nextPal[0], nextPal[1].day)
+    // console.log(prevPal[0], prevPal[1].day)
+    if(nextPal[0]<prevPal[0]){
+       outputPalindromeDate(nextPal);
+       //  console.log("next date")
+
+    }else{
+      outputPalindromeDate(prevPal)
+      // console.log("prev date")
+    }
+    
+
+
+  }
+  }else{
+    // console.log("no input")
+    output.innerText ="Please enter your birth date"
+  }
+}
+
+
+function outputPalindromeDate(date){
+  var day = date[1].day;
+  var month = date[1].month;
+  var year = date[1].year;
+  var counter = date[0];
+  // console.log(day, month, year , counter)
+  output.innerText = `The next nearest palindrome to your birth date is ${day}-${month}-${year}. You missed it by ${counter} days.....`;
+}
