@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    
+}
+#heading{
+    font-family: 'Open Sans', sans-serif;
+}
+.text{
+    font-size: 1.4rem;
+}
+#btn{
+    padding: .4rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
