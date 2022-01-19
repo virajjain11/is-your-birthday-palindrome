@@ -41,3 +41,16 @@ function reverseStr(str) {
     var listOfAll =[ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
     return listOfAll;
   }
+
+  function checkPalindromeForAll(date){
+    var listDate = getAllDateFormats(date);
+    var flag = false;
+    for(i= 0;i<listDate.length;i++){
+      if(checkPalindrome(listDate[i])){
+        flag =true;
+        // console.log(listDate[i])
+        break;
+      }
+    }
+    return flag;
+  }
