@@ -111,16 +111,74 @@ function getNextDate(date) {
     };
 }
 
-function getNextPalindromeDate(date){
+function getNextPalindromeDate(date) {
     var newDate = getNextDate(date)
     var counter = 0;
-    while(1){
-      counter++;
-      var palDate = checkPalindromeForAll(newDate);
-      if(palDate){
-        break;
-      }
-      newDate = getNextDate(newDate);
+    while (1) {
+        counter++;
+        var palDate = checkPalindromeForAll(newDate);
+        if (palDate) {
+            break;
+        }
+        newDate = getNextDate(newDate);
     }
-    return[counter, newDate];
-   }
+    return [counter, newDate];
+}
+
+function getPreviousDate(date) {
+    var day = date.day;
+    var month = date.month;
+    var year = date.year;
+    day = day - 1;
+    var daysMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (month === 3) {
+        // march to february
+        if (leapYear(year)) {
+            if (day < 1) {
+                // leapYear
+                day = 29;
+                month--;
+            }
+
+        } else {
+            if (day < 1) {
+                //  march 1 to feb 28 not a leap year
+                day = 28;
+                month--;
+            }
+        }
+
+    } else {
+        //  rest of the month
+        if (day < 1) {
+            // first day of this month to last day of previous month
+            month--;
+            day = daysMonth[month - 1];
+        }
+
+    }
+    if (month < 1) {
+        year--;
+        day = 31;
+        month = 12;
+    }
+    return {
+        day: day,
+        month: month,
+        year: year
+    };
+}
+
+function getPreviousPalindromeDate(date) {
+    var newDate = getPreviousDate(date)
+    var counter = 0;
+    while (1) {
+        counter++;
+        var palDate = checkPalindromeForAll(newDate);
+        if (palDate) {
+            break;
+        }
+        newDate = getPreviousDate(newDate);
+    }
+    return [counter, newDate];
+}
