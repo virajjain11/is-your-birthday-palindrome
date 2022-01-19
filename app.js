@@ -7,6 +7,7 @@ function reverseStr(str) {
   function checkPalindrome(str) {
     return (str === reverseStr(str));
   }
+
   function convertDateToStr(date) {
     var dateStr = {
       day: '',
@@ -27,4 +28,16 @@ function reverseStr(str) {
     }
     dateStr.year = date.year.toString();
   return dateStr;
+  }
+
+  function getAllDateFormats(date){
+    var dayStr = convertDateToStr(date);
+    var ddmmyyyy = dayStr.day + dayStr.month + dayStr.year;
+    var mmddyyyy = dayStr.month+ dayStr.day + dayStr.year ;
+    var yyyymmdd = dayStr.year + dayStr.month + dayStr.day;
+    var ddmmyy =dayStr.day + dayStr.month + dayStr.year.slice(-2);
+    var mmddyy = dayStr.month+ dayStr.day + dayStr.year.slice(-2);
+    var yymmdd =dayStr.year.slice(-2) + dayStr.month + dayStr.day;
+    var listOfAll =[ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
+    return listOfAll;
   }
