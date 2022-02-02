@@ -5,39 +5,59 @@ body{
     padding: 0;
 }
 .container{
-    display: block;
-    margin: auto;
+
+    display: block; 
+    /* margin: auto;  */
+    width: 100%;
     text-align: center;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.4rem;
+    /* margin-top: .5rem;    */
+    background-color:#c3a2a2;
+}
+.card{
+    box-shadow: 2px 6px 10px 2px rgb(0 0 0 / 20%);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    height: 350px;
+    overflow: hidden;
+     border-radius: 1rem;
 }
 #heading{
     font-family: 'Open Sans', sans-serif;
     padding: 2rem;
     /* margin-top: 0; */
-    max-width: 66%;
+    width: 100%;
+    /* max-width: 66%; */
     margin: auto;
     font-size: 2rem;
-    background-color: aqua;
-    border-radius: 2rem;
+    background-color:#3da7a7;
+    /* border-radius: 2rem; */
     /* box-sizing: border-box; */
 }
 #inputDate{
     font-size: 1rem;
     border: none;
-    border-bottom: 3px solid slateblue;
-   
+    border-bottom: 3px solid #2a4343;
+   border-radius: .5rem;
     height: 28px;
     padding: .5rem 1.5rem;
     font-weight: bold;
     outline: none;
     margin: 0 auto;
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
+    background-color: #b79595;
+    transition-duration: .4s;
 }
 
-/* .text{
-    
-} */
+#inputDate:hover{
+    cursor: pointer;
+    background-color: #957373;
+  }
 #btn{
     /* height: ;  */
      padding: .5rem 2rem;
@@ -47,14 +67,11 @@ body{
     font-weight:600;
     font-size: 1.2rem;
     background-color: #ecf0f1;
+    background-color: #b79595;
     border-radius: .4rem;
     transition-duration: .5s;
-
-
-    
 }
 #btn:hover{
     cursor: pointer;
-    background-color: aquamarine;
-    
-}
+    background-color: rgb(118, 221, 187);
+    }
